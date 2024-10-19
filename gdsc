@@ -1,0 +1,39 @@
+#https server block
+server {
+
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name gdsc.yashsrv.in;
+
+    #ssl configuration
+    ssl_certificate         /etc/ssl/certs/yashsrv.pem;
+    ssl_certificate_key     /etc/ssl/private/yashsrv.key;
+
+    #serving static files
+    root /gdsc/;
+    index views/login.html;
+
+    location / {
+        try_files $uri $uri/ /login;
+    }
+
+    location = /login {
+        rewrite /login /views/login.html break;
+    }
+
+    location = /dashboard {
+        rewrite /dashboard /views/main.html break;
+    }
+
+}
+
+#http to https redirect
+server {
+
+    listen 80;
+    listen [::]:80;
+    server_name gdsc.yashsrv.in;
+
+    return 301 https://$host$request_uri;
+
+}
