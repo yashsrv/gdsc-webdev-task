@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/public/media/mesh.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login-container {
+    width: 420px;
+    padding: 22px 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 9px;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #413d3e;
+    margin: 7px 0px 18px 0px;
+    user-select: none;
+}
+
+.input {
+    margin: 10px 0px;
+}
+
+.input p {
+    margin: 0px 0px 10px 0px;
+    font-size: 16px;
+    user-select: none;
+}
+
+.input input {
+    margin: 0px 0px 10px 0px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0px 0px 0px 5px;
+    box-shadow: none;
+}
+
+#login-button {
+    width: 100%;
+    height: 44px;
+    margin: 8px 0px 7px 0px;
+    background-color: #a083ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+}
+
+#login-button:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
