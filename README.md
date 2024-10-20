@@ -30,7 +30,7 @@ My first ever GitHub repo is here, made in the 1st semester for the GDSC recruit
 ## Deployment
 
 Project is deployed on a virtual private server (VPS) that points to my personal domain.
-- using cloudflare to prevent MITM and DDoS, also for DNS proxy and content caching.
+- using cloudflare to prevent MITM and DDoS, also for DNS proxy, SSL and content caching.
 
 
 
