@@ -1,5 +1,5 @@
 
-# NSUT-GDSC WebDev Recruitment task
+# NSUT-GDSC Web Dev Recruitment task
 
 The first ever GitHub repo is here, made in 1st year for the GDSC recruitment.
 
