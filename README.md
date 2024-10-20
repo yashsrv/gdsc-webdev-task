@@ -24,7 +24,7 @@ The first ever GitHub repo is here, made in 1st year for the GDSC recruitment.
 
 - username = admin & password = admin123
 
-- using cookies to store your login credentials. unathourized access lead to page redirection to '/login'
+- using cookies to store your login credentials. unathourized access leads to page redirection to '/login'
 - using socket.io to connect to the websocket provided, and Chart.js to create charts. Random numbers (from websocket) are multiplied by 100 to create meaningful stats.
 - Nginx is only used to server static content, SSL handling, page redirection and rewrite functionality.
 ## Deployment
