@@ -1,7 +1,7 @@
 const monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const ctx = document.getElementById('myChart').getContext('2d')
 
-// creating a chart instance
+// Creating a chart instance
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -27,42 +27,43 @@ const myChart = new Chart(ctx, {
 let dataList = []
 let copyList = []
 
-//creating a socket.io instance
+// Creating a socket.io instance
 const socket = io('https://data.gdscnsut.com')
 
 socket.on('random_number', (data) => {
-    dataList.push(data.number * 100) //updating dataList
-    copyList = [...dataList] //copying dataList as copyList
+    dataList.push(data.number * 100) // Updating dataList
+    copyList = [...dataList] // Copying dataList as copyList
 
-    updateData(dataList) //function is called every 1 sec
+    updateData(dataList) // Function is called every 1 sec
 })
 
 function updateData(dataList) {
-    //updating chart data
+    // Updating chart data
     myChart.data.datasets[0].data = dataList
     myChart.update()
 
-    //stopping socket connection
+    // Stopping socket connection
     if (dataList.length === 12 && socket.connected) {
         socket.disconnect()
     }
 
     let currentValue = dataList[dataList.length - 1]
-    //updating total downloads
+
+    // Updating total downloads
     let tdElement = document.getElementById('td')
     let tdValue = parseInt(tdElement.textContent)
     tdElement.innerHTML = `<b>${tdValue + currentValue}</b>`
 
-    //sorting copyList in decreasing order
     let hdValue = copyList.sort((a, b) => b - a)[0]
     if (currentValue === hdValue) {
-        //updating highest downloads
+
+        // Updating highest downloads
         document.getElementById('hd').innerHTML = `<b>${currentValue}</b>`
-        
-        //updating peak month
+
+        // Updating peak month
         let peakMonthsList = []
-        dataList.forEach((item,index)=>{
-            if (item === hdValue){
+        dataList.forEach((item, index) => {
+            if (item === hdValue) {
                 peakMonthsList.push(monthList[index])
             }
         })
