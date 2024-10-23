@@ -22,7 +22,7 @@ server {
     }
 
     location = /dashboard {
-        rewrite /dashboard /views/main.html break;
+        rewrite /dashboard /views/dashboard.html break;
     }
 
 }
