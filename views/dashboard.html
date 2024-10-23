@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Dashboard</title>
+    <link rel="icon" href="../public/media/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../public/css/main.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script type="module">
+        import { cookieChecker } from '/public/js/cookie.js'
+        document.addEventListener("DOMContentLoaded", cookieChecker)
+    </script>
+</head>
+
+<body>
+    <div id="title-bar">
+        <div id="logo">
+            <img src="../public/media/favicon.png">
+            <h2>Super Dashboard</h2>
+        </div>
+        <div id="label">
+            <p>GDSC: made by Yash (2024UME4077)</p>
+        </div>
+    </div>
+    <div id="main">
+        <div class="item1">
+            <h2>KPI Stats:</h2>
+            <div id="chart-container">
+                <canvas id="myChart"></canvas>
+                <script src="/public/js/chart.js"></script>
+            </div>
+        </div>
+        <div class="item2">
+            <div class="cards">
+                <img src="/public/media/td.png">
+                <p class="card-data" id="td"><b>0</b></p>
+                <p class="card-label">Total Downloads</p>
+            </div>
+            <div class="cards">
+                <img src="/public/media/hd.png">
+                <p class="card-data" id="hd"><b>0</b></p>
+                <p class="card-label">Highest Downloads</p>
+            </div>
+            <div class="cards">
+                <img src="/public/media/pm.png">
+                <p class="card-data" id="pm"><b>Null</b></p>
+                <p class="card-label">Peak Month(s)</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
