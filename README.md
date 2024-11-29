@@ -2,7 +2,9 @@
 # NSUT-GDSC Web Dev Recruitment task
 
 My first ever GitHub repo is here, made in the 1st semester for the GDSC recruitment.<br><br>
-**NOTE:** Not a responsive website, but works well. The chart may not load if the websocket is shut down by GDSC itself.
+**NOTE:** Not a responsive website, but works well. The chart may not load if the websocket is shut down by GDSC itself.<br>
+**RESULTS:** I got selected in WebDev department 🥳
+
 
 
 
